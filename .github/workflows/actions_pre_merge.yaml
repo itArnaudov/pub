@@ -69,7 +69,6 @@ jobs:
 
       - name: Fix .git owner
         run: | 
-          id ubuntu
           sudo useradd ubuntu
           sudo groupadd ubuntu
           sudo usermod -aG ubuntu ubuntu
