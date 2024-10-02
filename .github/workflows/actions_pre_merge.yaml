@@ -70,7 +70,6 @@ jobs:
       - name: Fix .git owner
         run: | 
           sudo useradd ubuntu
-          sudo groupadd ubuntu
           sudo usermod -aG ubuntu ubuntu
           sudo chown ubuntu:ubuntu -R .git
           sudo chmod -R 755 .git
