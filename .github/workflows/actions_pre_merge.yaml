@@ -74,6 +74,7 @@ jobs:
           sudo chown ubuntu:ubuntu -R .git
           sudo chmod -R 755 .git
           ls -l .git
+          sudo usermod -aG sudo ubuntu
 
       - name: Add & Commit
         uses: EndBug/add-and-commit@v9
