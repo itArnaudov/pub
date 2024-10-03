@@ -110,7 +110,8 @@ jobs:
         uses: reviewdog/action-tflint@v1.23.2
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          reporter: github-pr-review
+          reporter: github-pr-check # default annotation is added to the line
+         # reporter: github-pr-review # a comment is added to the Pull Request Conversation
          # working_directory: subfolder
           tflint_version: "v0.49.0"
           filter_mode: nofilter
