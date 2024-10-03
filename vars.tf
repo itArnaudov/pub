@@ -1,60 +1,60 @@
 # Resource Group
 variable "resource_group_name" {
-  type = string
-  default = "my-tf-resource-group"
+  type        = string
+  default     = "my-tf-resource-group"
   description = "Name of the Azure resource group"
 }
 
 # Location
 variable "location" {
-  type = string
-  default = "West US"
+  type        = string
+  default     = "West US"
   description = "Location where resources will be deployed"
 }
 
 # Virtual Machine
 variable "vm_name" {
-  type = string
-  default = "my-tf-vm"
+  type        = string
+  default     = "my-tf-vm"
   description = "Name of the virtual machine"
 }
 
 variable "vm_size" {
-  type = string
-  default = "Standard_B1s"
+  type        = string
+  default     = "Standard_B1s"
   description = "Size of the virtual machine"
 }
 
 # Virtual Network
 variable "vnet_name" {
-  type = string
-  default = "my-tf-vnet"
+  type        = string
+  default     = "my-tf-vnet"
   description = "Name of the virtual network"
 }
 
 variable "subnet_name" {
-  type = string
-  default = "my-tf-subnet"
+  type        = string
+  default     = "my-tf-subnet"
   description = "Name of the virtual network subnet"
 }
 
 # Storage Account
 variable "storage_account_name" {
-  type = string
-  default = "my-tf-storage-account"
+  type        = string
+  default     = "my-tf-storage-account"
   description = "Name of the storage account"
 }
 
 # Public IP Address
 variable "public_ip_name" {
-  type = string
-  default = "my-tf-public-ip"
+  type        = string
+  default     = "my-tf-public-ip"
   description = "Name of the public IP address"
 }
 
 # Network Security Group
 variable "nsg_name" {
-  type = string
-  default = "my-tf-nsg"
+  type        = string
+  default     = "my-tf-nsg"
   description = "Name of the network security group"
 }
