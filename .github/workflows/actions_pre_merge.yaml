@@ -25,7 +25,7 @@ jobs:
       - name: Fix .git owner
         run: if test -d .git; then sudo chown ubuntu:ubuntu -R .git; fi
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           ref: ${{ github.event.pull_request.head.ref }}
@@ -57,20 +57,21 @@ jobs:
         run: sh ${GITHUB_WORKSPACE}/.github/scripts/set_cloud_module_tag.sh -p "${GITHUB_WORKSPACE}" -v "${{ steps.semvers.outputs.patch }}"
 
       - name: Install Terraform
-        uses: hashicorp/setup-terraform@v2
+        uses: hashicorp/setup-terraform@v3
 
       - name: Run terraform fmt
         id: fmt
         run: terraform fmt -diff -recursive
 
       - name: Render terraform docs
-        uses: terraform-docs/gh-actions@v1.1.0
+        uses: terraform-docs/gh-actions@v1.3.0
         with:
           config-file: .github/config/terraform-docs.yaml
 
       - name: Fix .git owner
         run: | 
           sudo chown -R "${USER:-$(id -un)}" .
+        #  sudo chmod -R ugo+rwX .
         # sudo useradd ubuntu
         # sudo usermod -aG ubuntu ubuntu
         # sudo chown ubuntu:ubuntu -R .git
@@ -93,7 +94,7 @@ jobs:
       - docs_and_versions
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.ref }}
 
@@ -106,11 +107,14 @@ jobs:
         run: terraform validate
 
       - name: Run TFLint
-        uses: reviewdog/action-tflint@v1.22.0
+        uses: reviewdog/action-tflint@v1.23.2
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-review
+         # working_directory: subfolder
           tflint_version: "v0.49.0"
           filter_mode: nofilter
           tflint_init: true
           fail_on_error: false
           flags: "--module --recursive"
+          level: info  # change to info for more information
