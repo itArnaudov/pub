@@ -1,5 +1,7 @@
 # pub 1
 
+![example workflow](https://github.com/itArnaudov/pub/actions/workflows/actions_pre_merge.yaml/badge.svg?style=plastic)
+
 ![test](https://img.shields.io/github/issues-pr/itArnaudov/pub?style=plastic)
 ![test](https://img.shields.io/github/issues-pr-closed/itArnaudov/pub)
 ![test](https://img.shields.io/github/issues/itArnaudov/pub)
