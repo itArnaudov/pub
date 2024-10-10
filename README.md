@@ -20,7 +20,7 @@
 
 <!-- BEGIN_TF_DOCS -->
 
-
+ <!-- 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
@@ -34,4 +34,6 @@
 | <a name="input_vm_name"></a> [vm\_name](#input\_vm\_name) | Name of the virtual machine | `string` | `"my-tf-vm"` | no |
 | <a name="input_vm_size"></a> [vm\_size](#input\_vm\_size) | Size of the virtual machine | `string` | `"Standard_B1s"` | no |
 | <a name="input_vnet_name"></a> [vnet\_name](#input\_vnet\_name) | Name of the virtual network | `string` | `"my-tf-vnet"` | no |
+   -->
+
 <!-- END_TF_DOCS -->
