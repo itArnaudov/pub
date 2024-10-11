@@ -67,6 +67,7 @@ jobs:
         uses: terraform-docs/gh-actions@v1.3.0
         with:
           config-file: .github/config/terraform-docs.yaml
+          output-file: /home/runner/work/pub/README.md
           working-dir: infra # terraform/Azure
           # ,./terraform/Azure/az_modules/gcp_dns_zone,./terraform/AWS_GCP
 
