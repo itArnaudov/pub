@@ -21,16 +21,16 @@ content: |-
   {{ .Requirements }}
   ## Usage
   Basic usage of this module is as follows:
-```hcl
+  ```hcl
   module "example" {
     {{"\t"}} source  = "<module-path>"
-{{- if .Module.RequiredInputs }}
+  {{- if .Module.RequiredInputs }}
     {{"\n\t"}} # Required variables
     {{- range .Module.RequiredInputs }}
     {{"\t"}} {{ .Name }}  = {{ .GetValue }}
     {{- end }}
     {{- end }}
-{{- if .Module.OptionalInputs }}
+  {{- if .Module.OptionalInputs }}
     {{"\n\t"}} # Optional variables
     {{- range .Module.OptionalInputs }}
     {{"\t"}} {{ .Name }}  = {{ .GetValue | printf "%s" }}
@@ -38,6 +38,6 @@ content: |-
     {{- end }}
   }
   ```
-{{ .Resources }}
-{{ .Inputs }}
-{{ .Outputs }}
+  {{ .Resources }}
+  {{ .Inputs }}
+  {{ .Outputs }}
