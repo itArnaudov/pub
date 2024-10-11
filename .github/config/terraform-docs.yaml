@@ -1,5 +1,5 @@
 output:
-  file: ../README.md
+  file: /home/runner/work/pub/README.md
   mode: inject
 
 settings:
