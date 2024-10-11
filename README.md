@@ -17,6 +17,24 @@
 
 
 
+<details markdown="1"><summary markdown="span"><b>example dropdown</b></summary><br>
+  <div markdown=1>
+
+**Example**:
+
+
+  ```go
+  func main() {}
+  ```
+
+>- Test
+>- build 
+
+$$1+1=2$$ 
+
+  </div>
+</details>
+
 
 <!-- BEGIN_TF_DOCS -->
 
