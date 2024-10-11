@@ -37,22 +37,33 @@ $$1+1=2$$
 
 
 <!-- BEGIN_TF_DOCS -->
-## Providers
 
-| Name | Version |
-|------|---------|
-| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | n/a |
-
-## Modules
-
-No modules.
-
+## Usage
+Basic usage of this module is as follows:
+```hcl
+module "example" {
+  	 source  = "<module-path>"
+  
+	 # Required variables
+  	 location  = 
+  	 name  = 
+  
+	 # Optional variables
+  	 nsg_name  = "my-tf-nsg"
+  	 public_ip_name  = "my-tf-public-ip"
+  	 resource_group_name  = "my-tf-resource-group"
+  	 storage_account_name  = "my-tf-storage-account"
+  	 subnet_name  = "my-tf-subnet"
+  	 vm_name  = "my-tf-vm"
+  	 vm_size  = "Standard_B1s"
+  	 vnet_name  = "my-tf-vnet"
+}
+```
 ## Resources
 
 | Name | Type |
 |------|------|
 | [azurerm_virtual_machine.example](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_machine) | resource |
-
 ## Inputs
 
 | Name | Description | Type | Default | Required |
@@ -67,7 +78,6 @@ No modules.
 | <a name="input_vm_name"></a> [vm\_name](#input\_vm\_name) | Name of the virtual machine | `string` | `"my-tf-vm"` | no |
 | <a name="input_vm_size"></a> [vm\_size](#input\_vm\_size) | Size of the virtual machine | `string` | `"Standard_B1s"` | no |
 | <a name="input_vnet_name"></a> [vnet\_name](#input\_vnet\_name) | Name of the virtual network | `string` | `"my-tf-vnet"` | no |
-
 ## Outputs
 
 | Name | Description |
