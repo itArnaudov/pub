@@ -58,3 +58,14 @@ variable "nsg_name" {
   default     = "my-tf-nsg"
   description = "Name of the network security group"
 }
+#
+variable "name" {
+  type        = string
+  description = "The name of the virtual machine"
+}
+
+variable "location" {
+  type        = string
+  description = "The location of the virtual machine"
+}
+#
