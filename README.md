@@ -12,10 +12,10 @@
 ![test](https://img.shields.io/github/languages/top/itArnaudov/pub?style=plastic)
 ![test](https://img.shields.io/github/commit-activity/m/itArnaudov/pub)
 
-
-[![License: GNU GPL 3.0](https://img.shields.io/badge/License-GNU%20GPL%203.0-blue.svg?style=plastic)](LICENSE)
-
-
+[![License: GNU GPL 3.0](https://img.shields.io/badge/License-GNU%20GPL%203.0-blue.svg?style=plastic)](LICENSE) 
+    <a href="https://github.com/itArnaudov/pub/graphs/contributors">
+      <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/itArnaudov/pub" />
+    </a>
 
 <details markdown="1"><summary markdown="span"><b>example dropdown</b></summary><br>
   <div markdown=1>
